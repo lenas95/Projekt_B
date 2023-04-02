@@ -17,7 +17,7 @@ untersucht. Hierfür werden 48 historische Simulationen des CMIP6 und 6 Observat
 
 ## Methoden
 
-Die Codes zum Projekt finden sich im Ordner [Codes](http://drdanielappel.de "Mathe- und Infoseite"](https://github.com/lenas95/Projekt_B/tree/main/Codes).
+Die Codes zum Projekt finden sich im Ordner [Codes](https://github.com/lenas95/Projekt_B/tree/main/Codes).
 
 Um eine Vergleichbarkeit zwischen den Datensätzen zu ermöglichen wurden die Datensätze der CMIP6-Modelle und der Observationen vor den jeweiligen
 Berechnungen auf ein einheitliches globales Gitter (1° x 1°) interpoliert. Zunächst wurden jeweils die gemittelte Niederschlagsmenge des Rx1day in allen  
@@ -34,4 +34,4 @@ die Standardabweichung normierte Differenz zwischen den Mittelwerten der histori
 
 ## Resultate und Diskussion
 
-Die Resultate und die dazugehörige Diskussion können dem beigefügten ([Report](http://drdanielappel.de "Mathe- und Infoseite") entnommen werden.
+Die Resultate und die dazugehörige Diskussion können dem beigefügten ([Report](http://drdanielappel.de "Mathe- und Infoseite")) entnommen werden.
