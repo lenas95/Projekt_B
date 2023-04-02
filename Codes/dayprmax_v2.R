@@ -11,7 +11,7 @@ library(scales)
 library(rlist)
 library(ggplot2)
 
-setwd("~/Projekt_22/data_Precip")
+setwd("~/Projekt_22/data_Precip")  
 
 #Load basics.Data to initialize
 load("~/Projekt_22/data_Precip/basics.RData")
@@ -19,7 +19,7 @@ load("~/Projekt_22/data_Precip/basics.RData")
 #Calculate average prmax and std. over all hist_models (48), ensemble members and years
 
 sequence <- c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37,
-              38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48) #20 und 30 fehlen
+              38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48) 
 
 if (exists("day.mean_1") == FALSE){
   for (i in sequence){  # Problem with 20 
@@ -153,25 +153,25 @@ for (names in obvs_data){
            diff.df)
     
     #Try to make a for loop ??
-    # diff.df %>% ggplot(aes(x = lon, y = lat, fill = value)) +
-    #   ggtitle(paste0(names, sep= " ", "obvs. vs. hist_model", i, sep="")) +
-    #   geom_raster(interpolate = FALSE) +  # adding heat maps
-    #   labs(x="Longitude", y="Latitude", fill = "Norm. Sd") +
-    #   #scale_fill_viridis_c(na.value = NA, limits = c(-5, 5)) + # change color
-    #   #scale_fill_gradient2(high = "green", mid = "white", low ="red", midpoint = 0, limits = c(-5,5), na.value = NA) +
-    #   #scale_fill_gradientn(
-    #   #colours=c("darkgreen", "chartreuse4", "chartreuse", "white", "coral", "coral2", "coral3"),
-    #   #  values = rescale(c(3, 2, 1, 0, -1, -2, -3)), limits = c(-3,3)) +
-    #   scale_fill_fermenter(palette = "RdBu", breaks = c(-3, -2, -1, 0, 1, 2, 3), limits = c(-3, 3), na.value = "grey60") + #oob = squish) +
-    #   guides(fill = guide_coloursteps(even.steps = F, show.limits = T)) +
-    #   #scale_fill_manual(values = c("0" = "white")) +
-    #   borders() + # adding country borders
-    #   coord_equal(expand = FALSE)
-    # 
-    # ggsave(path = paste0("~/Projekt_22/google/day.prmax/", names, sep="","/") , filename = paste0(names, "_vs_hist", i, ".png", sep = ""))
-    # print("Figure saved")
-    # dev.set(dev.prev())
-    # dev.off()
+    diff.df %>% ggplot(aes(x = lon, y = lat, fill = value)) +
+      ggtitle(paste0(names, sep= " ", "obvs. vs. hist_model", i, sep="")) +
+       geom_raster(interpolate = FALSE) +  # adding heat maps
+       labs(x="Longitude", y="Latitude", fill = "Norm. Sd") +
+       #scale_fill_viridis_c(na.value = NA, limits = c(-5, 5)) + # change color
+       #scale_fill_gradient2(high = "green", mid = "white", low ="red", midpoint = 0, limits = c(-5,5), na.value = NA) +
+       #scale_fill_gradientn(
+       #colours=c("darkgreen", "chartreuse4", "chartreuse", "white", "coral", "coral2", "coral3"),
+       #  values = rescale(c(3, 2, 1, 0, -1, -2, -3)), limits = c(-3,3)) +
+       scale_fill_fermenter(palette = "RdBu", breaks = c(-3, -2, -1, 0, 1, 2, 3), limits = c(-3, 3), na.value = "grey60") + #oob = squish) +
+       guides(fill = guide_coloursteps(even.steps = F, show.limits = T)) +
+       #scale_fill_manual(values = c("0" = "white")) +
+       borders() + # adding country borders
+       coord_equal(expand = FALSE)
+     
+     ggsave(path = paste0("~/Projekt_22/google/day.prmax/", names, sep="","/") , filename = paste0(names, "_vs_hist", i, ".png", sep = ""))
+     print("Figure saved")
+     dev.set(dev.prev())
+     dev.off()
   }
   
   #configure list of differences to know how big the difference is for each observational dataset(Discussion in Report)
