@@ -34,4 +34,4 @@ die Standardabweichung normierte Differenz zwischen den Mittelwerten der histori
 
 ## Resultate und Diskussion
 
-Die Resultate und die dazugehörige Diskussion können dem beigefügten ([Report](http://drdanielappel.de "Mathe- und Infoseite")) entnommen werden.
+Die Resultate und die dazugehörige Diskussion können dem beigefügten ([Report](https://github.com/lenas95/Projekt_B/blob/main/Project_22_Prmax.pdf)) entnommen werden.
